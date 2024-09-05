@@ -8,8 +8,9 @@
 
 //Enable connection
 try {
+    $HOME = "/home/balajan/public_html/"
 //    $pdo = new PDO("mysql:host=" . HOST . "; dbname=" . DBNAME, DBUSER, DBPASS);
-    $pdo = new PDO("sqlite:/home/w9saka5ulbu0/public_html/site1/dbs/site1.db");
+    $pdo = new PDO("sqlite:$HOME/site1/dbs/site1.db");
     //Set PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
